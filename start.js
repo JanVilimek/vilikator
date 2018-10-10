@@ -229,6 +229,16 @@ bot.on('message', function(user, userID, channelID, message, evt) {
                     break;
                 }
             break;       
+
+
+            case '?':
+            case 'help':
+            case 'pomoc':               
+                bot.sendMessage({
+                    to: channelID,
+                    message: 'Všechny informace najdeš zde: '
+                });
+            break;
         }
 
         //https://goo.gl/4U45pd
@@ -237,6 +247,12 @@ bot.on('message', function(user, userID, channelID, message, evt) {
             console.log("Connected!");
             console.log("Logged in as: ");
             console.log(bot.username + " - (" + bot.id + ")");
+
+            bot.sendMessage({
+                to: 390316247339892738,
+                message: 'Vilíkátor je právě online !'
+
+            });
         });
 
         bot.on("presence", function(user, userID, status, game, event) {
@@ -249,7 +265,7 @@ bot.on('message', function(user, userID, channelID, message, evt) {
         });
 
         bot.on("any", function(event) {
-            /*console.log(rawEvent)*/ //Logs every event
+            console.log(rawEvent);
         });
 
         bot.on("disconnect", function() {
