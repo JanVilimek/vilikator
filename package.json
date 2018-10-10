@@ -1,4 +1,5 @@
 {
+  "scripts": { "start": "node start.js"},
   "name": "vilikator",
   "version": "1.0.0",
   "description": "haha 10101110011",
