@@ -175,6 +175,10 @@ client.on('message', message => {
 
 			    	break;
 
+			    	case 'baf':
+			    		message.channel.send('<@'+message.author.id+'> LEK !');
+			    	break;
+
 
 			    	case 'je':
 			    	case 'jarda':
