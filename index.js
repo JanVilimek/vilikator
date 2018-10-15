@@ -179,6 +179,10 @@ client.on('message', message => {
 			    		message.channel.send('<@'+message.author.id+'> LEK !');
 			    	break;
 
+			    	case 'ping':
+			    		message.channel.send('<@'+message.author.id+'> Pong !');
+			    	break;
+
 
 			    	case 'je':
 			    	case 'jarda':
